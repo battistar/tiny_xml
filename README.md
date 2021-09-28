@@ -1,5 +1,7 @@
 # TinyXml
 
+![CI](https://github.com/Battistar/tiny_xml/actions/workflows/elixir.yml/badge.svg)
+
 **TODO: Add description**
 
 ## Installation
