@@ -4,6 +4,7 @@ defmodule TinyXml do
   require Record
 
   Record.defrecord(:xmlText, Record.extract(:xmlText, from_lib: "xmerl/include/xmerl.hrl"))
+  Record.defrecord :xmlAttribute, Record.extract(:xmlAttribute, from_lib: "xmerl/include/xmerl.hrl")
 
   @spec all(binary(), binary()) :: [tuple()] | []
   def all(xml_string, path) when is_binary(xml_string) do
@@ -34,6 +35,14 @@ defmodule TinyXml do
   def text(xml_node) do
     case xpath(xml_node, "./text()") do
       [xmlText(value: value)] -> to_string(value)
+      _ -> nil
+    end
+  end
+
+  @spec attribute(tuple(), binary()) :: binary() | nil
+  def attribute(xml_node, attribute) do
+    case xpath(xml_node, "./@#{attribute}") do
+      [xmlAttribute(value: value)] -> to_string(value)
       _ -> nil
     end
   end

@@ -6,13 +6,13 @@ defmodule TinyXmlTest do
   doctest TinyXml
 
   test "should get xml node from xml string" do
-    result = TinyXml.first(dummy_xml(), "//shiporder/orderperson")
+    result = TinyXml.first(dummy_xml(), "/shiporder/orderperson")
 
     assert is_tuple(result)
   end
 
   test "should get xml node list from xml string" do
-    result = TinyXml.all(dummy_xml(), "//shiporder/item")
+    result = TinyXml.all(dummy_xml(), "/shiporder/item")
 
     assert is_list(result)
     assert length(result) == 2
@@ -21,9 +21,18 @@ defmodule TinyXmlTest do
   test "should get xml node value" do
     result =
       dummy_xml()
-      |> TinyXml.first("//shiporder/shipto/country")
+      |> TinyXml.first("/shiporder/shipto/country")
       |> TinyXml.text()
 
     assert result == "Norway"
+  end
+
+  test "should get xml node attribute" do
+    result =
+      dummy_xml()
+      |> TinyXml.first("/shiporder")
+      |> TinyXml.attribute("orderid")
+
+    assert result == "889923"
   end
 end
