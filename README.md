@@ -1,7 +1,6 @@
 # TinyXml
 
-![CI](https://github.com/Battistar/tiny_xml/actions/workflows/elixir.yml/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/Battistar/tiny_xml/badge.svg?branch=master)](https://coveralls.io/github/Battistar/tiny_xml?branch=master)
+![CI](https://github.com/Battistar/tiny_xml/actions/workflows/ci.yml/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/Battistar/tiny_xml/badge.svg?branch=main)](https://coveralls.io/github/Battistar/tiny_xml?branch=main)
 
 **TODO: Add description**
 
