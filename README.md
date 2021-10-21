@@ -11,7 +11,7 @@ The package can be installed by adding `tiny_xml` to your list of dependencies i
 ```elixir
 def deps do
   [
-    {:tiny_xml, git: "https://github.com/Battistar/tiny_xml", tag: "xxx"}
+    {:tiny_xml, git: "https://github.com/battistar/tiny_xml", tag: "xxx"}
   ]
 end
 ```
