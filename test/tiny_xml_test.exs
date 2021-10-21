@@ -1,12 +1,12 @@
 defmodule TinyXmlTest do
   use ExUnit.Case, async: true
 
-  @dummy_data_path "test/data/dummy_data.xml"
+  @data_path "test/data/dummy_data.xml"
 
   doctest TinyXml
 
   setup_all do
-    dummy_xml = File.read!(@dummy_data_path)
+    dummy_xml = File.read!(@data_path)
 
     {:ok, dummy_xml: dummy_xml}
   end
