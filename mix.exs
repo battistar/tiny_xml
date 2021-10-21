@@ -38,8 +38,7 @@ defmodule TinyXml.MixProject do
 
   defp dialyzer do
     [
-      plt_file: {:no_warn, "deps/dialyzer.plt"},
-      plt_add_apps: [:plug]
+      plt_file: {:no_warn, "deps/dialyzer.plt"}
     ]
   end
 end
