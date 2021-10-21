@@ -1,4 +1,8 @@
 defmodule TinyXml do
+  @moduledoc """
+  XML navigation and data extraction functions.
+  """
+
   import TinyXml.Utils, only: [from_string: 1]
 
   require Record
