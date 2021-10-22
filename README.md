@@ -45,7 +45,7 @@ Assume to use this XML for the following examples:
 
 ### Data extraction
 
-To access to the first tag, described in the XPath expression, use `first` function. Then extract the value by `text` function:
+To access to the first tag, described by an XPath expression, use `first` function. Then extract the value by `text` function:
 
 ```elixir
 def extract_value(xml) do
